@@ -14,10 +14,12 @@ const queryClient = new QueryClient({
   },
 })
 
+const basename = import.meta.env.PROD ? '/ZZBlog' : '/'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename="/ZZBlog">
+      <BrowserRouter basename={basename}>
         <App />
       </BrowserRouter>
     </QueryClientProvider>
