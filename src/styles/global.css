@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap');
+@import './reveal.css';
+
+:root {
+  /* Primary - Gold Accent */
+  --color-primary: #775a19;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #c5a059;
+  --color-on-primary-container: #4e3700;
+
+  /* Surface - Off-white Base */
+  --color-surface: #fcf9f8;
+  --color-surface-bright: #fcf9f8;
+  --color-surface-container: #f0eded;
+  --color-surface-container-high: #eae7e7;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-dim: #dcd9d9;
+  --color-surface-variant: #e5e2e1;
+  --color-surface-container-highest: #e5e2e1;
+
+  /* On Surface - Obsidian */
+  --color-on-surface: #1c1b1b;
+  --color-on-surface-variant: #4e4639;
+  --color-on-surface-dim: #757575;
+
+  /* Outline */
+  --color-outline: #7f7667;
+  --color-outline-variant: #d1c5b4;
+
+  /* Secondary */
+  --color-secondary: #6c5c3f;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f6e0ba;
+  --color-on-secondary-container: #736244;
+
+  /* Tertiary */
+  --color-tertiary: #485e8b;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #8fa5d6;
+  --color-on-tertiary-container: #233a65;
+
+  /* Error */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Background */
+  --color-background: #fcf9f8;
+  --color-on-background: #1c1b1b;
+
+  /* Typography */
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 700ms;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --color-primary: #d4b460;
+  --color-on-primary: #3d2e00;
+  --color-primary-container: #5c4512;
+  --color-on-primary-container: #f3e5b3;
+
+  --color-surface: #141414;
+  --color-surface-bright: #1c1b1b;
+  --color-surface-container: #1e1d1c;
+  --color-surface-container-high: #242321;
+  --color-surface-container-low: #181716;
+  --color-surface-container-lowest: #0f0e0d;
+  --color-surface-dim: #3a3937;
+  --color-surface-variant: #2d2b29;
+  --color-surface-container-highest: #2a2826;
+
+  --color-on-surface: #e6e2dd;
+  --color-on-surface-variant: #c3bfa5;
+  --color-on-surface-dim: #8a8680;
+
+  --color-outline: #958c81;
+  --color-outline-variant: #49443f;
+
+  --color-secondary: #d9cb90;
+  --color-on-secondary: #3a3212;
+  --color-secondary-container: #534927;
+  --color-on-secondary-container: #f1e3a8;
+
+  --color-tertiary: #b3c7e8;
+  --color-on-tertiary: #1c3161;
+  --color-tertiary-container: #364978;
+  --color-on-tertiary-container: #d5e3ff;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-background: #141414;
+  --color-on-background: #e6e2dd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-container);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Utility Classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

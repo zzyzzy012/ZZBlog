@@ -1,0 +1,119 @@
+.page {
+  padding: 48px 64px 96px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--color-on-surface);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-on-surface-variant);
+  max-width: 500px;
+}
+
+.categories {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 64px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(209, 197, 180, 0.15);
+}
+
+.categoryBtn {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  transition: color var(--duration-slow) var(--ease-out);
+}
+
+.categoryBtn:hover,
+.categoryBtn.active {
+  color: var(--color-primary);
+}
+
+.docs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.doc {
+  padding: 32px;
+  background: var(--color-surface-container-low);
+  border: 1px solid transparent;
+  transition: all var(--duration-slow) var(--ease-out);
+  cursor: pointer;
+}
+
+.doc:hover {
+  border-color: rgba(209, 197, 180, 0.3);
+  background: var(--color-surface-container);
+}
+
+.docCategory {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.5625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.docTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-on-surface);
+  margin-bottom: 12px;
+}
+
+.docDescription {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-on-surface-variant);
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 24px 32px 64px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .categories {
+    overflow-x: auto;
+    gap: 16px;
+  }
+
+  .docs {
+    grid-template-columns: 1fr;
+  }
+}

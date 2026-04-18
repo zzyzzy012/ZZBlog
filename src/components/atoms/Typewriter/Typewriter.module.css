@@ -1,0 +1,39 @@
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--color-primary);
+  font-weight: 300;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.h1, .h2, .h3, .p, .span {
+  font-family: var(--font-serif);
+}
+
+.h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.span {
+  font-size: inherit;
+}

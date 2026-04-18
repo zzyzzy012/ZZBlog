@@ -1,0 +1,143 @@
+.carousel {
+  width: 100%;
+}
+
+.trackContainer {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.trackContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.track {
+  display: flex;
+  gap: 48px;
+  padding: 0 64px;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 400px;
+}
+
+.card {
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+  aspect-ratio: 4 / 5;
+  background: var(--color-surface-container-low);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(28, 27, 27, 0.4), transparent);
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-on-surface);
+  margin-bottom: 8px;
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cardTitle {
+  color: var(--color-primary);
+}
+
+.cardCategory {
+  font-family: var(--font-sans);
+  font-size: 0.5625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+}
+
+.scrubber {
+  margin-top: 48px;
+  padding: 0 64px;
+}
+
+.scrubberTrack {
+  position: relative;
+  height: 2px;
+  background: rgba(119, 90, 25, 0.2);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.scrubberProgress {
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary);
+  transform-origin: left;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(119, 90, 25, 0.3);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dot:hover {
+  background: rgba(119, 90, 25, 0.5);
+}
+
+.dot.active {
+  background: var(--color-primary);
+  transform: scale(1.25);
+}
+
+@media (max-width: 900px) {
+  .track {
+    padding: 0 32px;
+    gap: 32px;
+  }
+
+  .slide {
+    width: 300px;
+  }
+
+  .scrubber {
+    padding: 0 32px;
+  }
+}
