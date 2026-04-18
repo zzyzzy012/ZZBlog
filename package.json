@@ -1,6 +1,6 @@
 {
   "name": "zzblog",
-  "homepage": "https://zzyzzy012.github.io/ZZBlog/",
+  "homepage": "./ZZBlog/",
   "private": true,
   "version": "0.0.1",
   "type": "module",

@@ -5,7 +5,8 @@
       "Bash(npm run *)",
       "Bash(npm list *)",
       "Bash(npm uninstall *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(dir \"D:\\\\Dev\\\\Frontend\\\\Projects\\\\FEBlog\\\\package.json\")"
     ]
   }
 }

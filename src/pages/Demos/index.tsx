@@ -6,7 +6,7 @@ import styles from './Demos.module.css'
 const projects = [
   {
     id: 1,
-    image: '/DeliveryBSM.jpg',
+    image: './DeliveryBSM.jpg',
     title: 'DeliveryBSM',
     subtitle: 'Logistics Admin Dashboard',
     description:
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     id: 2,
-    image: '/VCUI.jpg',
+    image: './VCUI.jpg',
     title: 'VCUI',
     subtitle: 'A Lightweight Vue Component Library',
     description:
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     id: 3,
-    image: '/zz_ft_journey.jpg',
+    image: './zz_ft_journey.jpg',
     title: 'zz_ft_journey',
     subtitle: 'Frontend Knowledge Notes',
     description:

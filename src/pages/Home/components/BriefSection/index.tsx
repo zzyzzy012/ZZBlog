@@ -57,7 +57,7 @@ export default function BriefSection() {
               }}
             >
               <img
-                src="/homeimg.jpg"
+                src="./homeimg.jpg"
                 alt="Portrait"
                 className={styles.image}
               />
